@@ -2,6 +2,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
             "type": "amiga-assembly",
             "request": "launch",
             "name": "WinUAE Debug",
@@ -15,7 +22,7 @@
                 "-s",
                 "chipmem_size=4",
                 "-s",
-                "kickstart_rom_file=D:\\CDTVA500A600A2000.47.111.PAL.rom"
+                "kickstart_rom_file=D:\\CDTVA500A600A2000.47.111.PAL.rom",
             ],
             "preLaunchTask": "amigaassembly: build"
         },
