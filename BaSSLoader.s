@@ -1,6 +1,6 @@
 ; Hardcode special addresses and library function offsets, so we don't include copyrighted ndk includes
 
-DMACON			EQU $dff096
+DMACON			EQU $DFF096
 SysBase			EQU 4
 OpenLibrary		EQU -552
 CloseLibrary		EQU -414
@@ -16,7 +16,7 @@ Execute			EQU -222
 	TST.L	D0			; zero if OpenLibrary() failed
 	BEQ.S	NoDos			; if failed, skip to exit
 
-	MOVE.W	$8120,DMACON		; just make sure to enable sprites and bitplane dma
+	MOVE.W	#$8120,DMACON		; just make sure to enable sprites and bitplane dma
 
 	MOVEA.L	D0,A6			; moving DOSBase to A6
 	MOVE.L	#SteelExe,D1		; string to execute
